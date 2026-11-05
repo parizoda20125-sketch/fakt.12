@@ -1,194 +1,4 @@
-
-Gemini bilan suhbat
-qiziqarli faktlar sayt tuzib ber
-
-Albatta! Qiziqarli faktlar haqida zamonaviy va chiroyli veb-sayt yaratish uchun HTML va CSS kodlarini tayyorladim.
-
-Bu saytga kirgan foydalanuvchi tugmani bosish orqali tasodifiy va qiziqarli faktlarni o‘qib borishi mumkin. Dizayni esa zamonaviy va foydalanishga qulay qilib ishlangan.
-
-Veb-sayt kodi
-Quyidagi kodlarni nusxalab, kompyuteringizda index.html nomli fayl ochib saqlang va istalgan brauzerda ochib ko'ring:
-
-HTML
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qiziqarli Faktlar Olami</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-        }
-
-        .container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-            width: 90%;
-            text-align: center;
-        }
-
-        h1 {
-            color: #4a5568;
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-
-        .fact-box {
-            background: #f7fafc;
-            border-left: 5px solid #667eea;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            min-height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        p#fact-text {
-            font-size: 18px;
-            color: #2d3748;
-            line-height: 1.5;
-        }
-
-        button {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.1s ease;
-        }
-
-        button:hover {
-            background: #5a67d8;
-        }
-
-        button:active {
-            transform: scale(0.98);
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>🧠 Qiziqarli Faktlar</h1>
-        <div class="fact-box">
-            <p id="fact-text">Tugmani bosing va eng ajoyib faktlar bilan tanishing!</p>
-        </div>
-        <button onclick="generateFact()">Yangi fakt ko'rsatish</button>
-    </div>
-
-    <script>
-        const facts = [
-            "Tovuqlar aslida dinozavrlarning eng yaqin tirik qarindoshlaridan biri hisoblanadi.",
-            "Asal hech qachon aynimaydi. Arxeologlar ming yillik qabrlaridan yaroqli asal topishgan.",
-            "Inson yuragi bir kunda o‘rtacha 100 000 martadan ko‘proq uradi.",
-            "Yer yuzidagi barcha odamlar bir joyga to‘plansa, ular Los-Anjeles shahri kattaligidagi hududga sig‘ishgan bo‘lardi.",
-            "Dengiz otlari bir umrga bitta juft tanlaydi va ular suzayotganda bir-irining dumidan ushlab oladilar.",
-            "Venera sayyorasida bir kun bir yildan uzunroq davom etadi.",
-            "Inson burni 1 trillionga yaqin turli xil hidlarni farqlay oladi.",
-            "Koinotda yulduzlar soni Yerdagi barcha qum zarrachalaridan ko‘proq.",
-            "Bananlar aslida rezavor mevalar turkumiga kiradi, qulupnay esa kirmaydi.",
-            "Mushuklar taxminan 100 xil turli ovoz chiqara oladi, itlar esa bor-yo‘g‘i 10 taga yaqin."
-        ];
-
-        function generateFact() {
-            const randomIndex = Math.floor(Math.random() * facts.length);
-            const factText = document.getElementById("fact-text");
-            
-            // Animatsiya effekti uchun qisqa o'zgarish
-            factText.style.opacity = 0;
-            setTimeout(() => {
-                factText.textContent = facts[randomIndex];
-                factText.style.opacity = 1;
-            }, 150);
-        }
-    </script>
-
-</body>
-</html>
-Saytga qanday o'zgartirishlar kiritish mumkin?
-Faktlarni ko'paytirish: facts massivi ichiga o'zingiz yoqtirgan yangi faktlarni vergul bilan qo'shib borishingiz mumkin.
-
-Dizaynni o'zgartirish: Ranglar va shriftlarni o'z didingizga moslab CSS qismidan o'zgartirishingiz oson.
-
-Agar ushbu saytni internetda hammaga ko‘rinadigan qilish (hosting qilish) yoki unga qo‘shimcha sahifalar qo‘shish bo‘yicha savollaringiz bo‘lsa, bemalol so‘rang!
-
-yoq juda qiziqarli bolsn sayt dizaynga ega
-
-Ajoyib! Qiziqarli va interaktiv "Qiziqarli Faktlar" veb-ilovasini yarataman. Ilovada zamonaviy glassmorphism dizayni, kategoriyalar, "Fakt yoki Uydirma" testi, saqlab qo'yish va qidiruv imkoniyatlari bo'ladi.
-
-Hozir ushbu to'liq ilovani yaratib beraman.
-
-Qiziqarli Faktlar Olami
-
-
-
-Siz uchun tayyorlangan "Faktolog" nomli interaktiv va zamonaviy faktlar veb-ilovasida quyidagi funksiyalar bor:
-
-Zamonaviy Dizayn: Neon effektlar, Glassmorphism uslubidagi kartochkalar va silliq CSS animatsiyalari.
-
-Kategoriyalar va Qidiruv: Koinot, Tabiat, Inson tani va Tarix bo'yicha tezkor filtrlar hamda qidiruv satri.
-
-Interaktiv Viktorina (Fakt yoki Uydirma): Foydalanuvchilar o'z bilimlarini sinab ko'rishlari, ball to'plashlari va ketma-ketlik (streak) recordlarini o'rnatishlari mumkin.
-
-Tasodifiy Fakt Generatori: Maxsus tugma bosilganda mushakbozlik (confetti) effekti bilan tasodifiy fakt modal oynada ko'rsatiladi.
-
-Saqlanganlar va Ulashish: Sevimli faktlarni xotirada saqlash (localStorage), nushxalash va to'g'ridan-to'g'ri Telegram'da ulashish imkoniyati.
-
-html fayl shaklida
-
-Siz uchun FAKTOLOG nomli o'ta zamonaviy, interaktiv va qiziqarli HTML faylni tayyorladim.
-
-HTML belgisi
-qiziqarli_faktlar_sayt
- HTML 
-Fayl ichiga kiritilgan imkoniyatlar:
-Dizayn va Stil:
-
-Glassmorphism & Neon Glow: Zamonaviy to'q rangli (dark mode) fon va neon effektlar.
-
-Animatsiyalar: Tugmalarni bosganda confetti (mushakbozlik) otilishi va silliq modal oynalar.
-
-Interaktiv Funksiyalar:
-
-Fact or Fiction (Mini-O'yin): Fakt haqiqat yoki uydirma ekanligini topish orqali ball to'plash o'yini.
-
-Tasodifiy Fakt Generatori: Maxsus tugma va modal oyna orqali tasodifiy fakt chiqarish.
-
-Kategoriyalar va Qidiruv: Koinot, Tabiat, Inson tani hamda Tarix bo'yicha saralash va qidiruv satri.
-
-Saqlash va Ulashish: Faktlarni localStorage xotirasiga saqlash (Bookmark), nusxalash va to'g'ridan-to'g'ri Telegram'ga ulashish tugmalari.
-
-Faylni yuklab olib, istalgan brauzerda ochishingiz va foydalanishingiz mumkin!
-
-
-
-
-
-Gemini odam emas. U xato qilishi mumkin, takroran tekshiring.
-
-Выполняю анализ
-<!DOCTYPE html>
+html_content = """<!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
@@ -869,11 +679,11 @@ Gemini odam emas. U xato qilishi mumkin, takroran tekshiring.
                             <button class="action-btn bookmark-btn ${isSaved ? 'saved' : ''}" onclick="toggleSave(${fact.id})">
                                 <i class="fa-${isSaved ? 'solid' : 'regular'} fa-bookmark"></i>
                             </button>
-                            <button class="action-btn" onclick="copyFact('${fact.text.replace(/'/g, "\'")}')">
+                            <button class="action-btn" onclick="copyFact('${fact.text.replace(/'/g, "\\'")}')">
                                 <i class="fa-regular fa-copy"></i>
                             </button>
                         </div>
-                        <button class="action-btn" onclick="shareTelegram('${fact.text.replace(/'/g, "\'")}')">
+                        <button class="action-btn" onclick="shareTelegram('${fact.text.replace(/'/g, "\\'")}')">
                             <i class="fa-paper-plane fa-solid" style="color: #22e5e0;"></i>
                         </button>
                     </div>
@@ -905,9 +715,7 @@ Gemini odam emas. U xato qilishi mumkin, takroran tekshiring.
         }
 
         function shareTelegram(text) {
-            const url = `https://t.me/share/url?url=${encodeURIComponent('https://faktolog.uz')}&text=${encodeURIComponent('🔥 Qiziqarli Fakt:
-
-' + text)}`;
+            const url = `https://t.me/share/url?url=${encodeURIComponent('https://faktolog.uz')}&text=${encodeURIComponent('🔥 Qiziqarli Fakt:\n\n' + text)}`;
             window.open(url, '_blank');
         }
 
@@ -970,5 +778,9 @@ Gemini odam emas. U xato qilishi mumkin, takroran tekshiring.
     </script>
 </body>
 </html>
-qiziqarli_faktlar_sayt.html
-“qiziqarli_faktlar_sayt.html” ko‘rsatilmoqda.
+"""
+
+with open('qiziqarli_faktlar_sayt.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("HTML fayli muvaffaqiyatli saqlandi.")
