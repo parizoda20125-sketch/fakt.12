@@ -1,0 +1,974 @@
+
+Gemini bilan suhbat
+qiziqarli faktlar sayt tuzib ber
+
+Albatta! Qiziqarli faktlar haqida zamonaviy va chiroyli veb-sayt yaratish uchun HTML va CSS kodlarini tayyorladim.
+
+Bu saytga kirgan foydalanuvchi tugmani bosish orqali tasodifiy va qiziqarli faktlarni o‘qib borishi mumkin. Dizayni esa zamonaviy va foydalanishga qulay qilib ishlangan.
+
+Veb-sayt kodi
+Quyidagi kodlarni nusxalab, kompyuteringizda index.html nomli fayl ochib saqlang va istalgan brauzerda ochib ko'ring:
+
+HTML
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiziqarli Faktlar Olami</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4a5568;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .fact-box {
+            background: #f7fafc;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p#fact-text {
+            font-size: 18px;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🧠 Qiziqarli Faktlar</h1>
+        <div class="fact-box">
+            <p id="fact-text">Tugmani bosing va eng ajoyib faktlar bilan tanishing!</p>
+        </div>
+        <button onclick="generateFact()">Yangi fakt ko'rsatish</button>
+    </div>
+
+    <script>
+        const facts = [
+            "Tovuqlar aslida dinozavrlarning eng yaqin tirik qarindoshlaridan biri hisoblanadi.",
+            "Asal hech qachon aynimaydi. Arxeologlar ming yillik qabrlaridan yaroqli asal topishgan.",
+            "Inson yuragi bir kunda o‘rtacha 100 000 martadan ko‘proq uradi.",
+            "Yer yuzidagi barcha odamlar bir joyga to‘plansa, ular Los-Anjeles shahri kattaligidagi hududga sig‘ishgan bo‘lardi.",
+            "Dengiz otlari bir umrga bitta juft tanlaydi va ular suzayotganda bir-irining dumidan ushlab oladilar.",
+            "Venera sayyorasida bir kun bir yildan uzunroq davom etadi.",
+            "Inson burni 1 trillionga yaqin turli xil hidlarni farqlay oladi.",
+            "Koinotda yulduzlar soni Yerdagi barcha qum zarrachalaridan ko‘proq.",
+            "Bananlar aslida rezavor mevalar turkumiga kiradi, qulupnay esa kirmaydi.",
+            "Mushuklar taxminan 100 xil turli ovoz chiqara oladi, itlar esa bor-yo‘g‘i 10 taga yaqin."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const factText = document.getElementById("fact-text");
+            
+            // Animatsiya effekti uchun qisqa o'zgarish
+            factText.style.opacity = 0;
+            setTimeout(() => {
+                factText.textContent = facts[randomIndex];
+                factText.style.opacity = 1;
+            }, 150);
+        }
+    </script>
+
+</body>
+</html>
+Saytga qanday o'zgartirishlar kiritish mumkin?
+Faktlarni ko'paytirish: facts massivi ichiga o'zingiz yoqtirgan yangi faktlarni vergul bilan qo'shib borishingiz mumkin.
+
+Dizaynni o'zgartirish: Ranglar va shriftlarni o'z didingizga moslab CSS qismidan o'zgartirishingiz oson.
+
+Agar ushbu saytni internetda hammaga ko‘rinadigan qilish (hosting qilish) yoki unga qo‘shimcha sahifalar qo‘shish bo‘yicha savollaringiz bo‘lsa, bemalol so‘rang!
+
+yoq juda qiziqarli bolsn sayt dizaynga ega
+
+Ajoyib! Qiziqarli va interaktiv "Qiziqarli Faktlar" veb-ilovasini yarataman. Ilovada zamonaviy glassmorphism dizayni, kategoriyalar, "Fakt yoki Uydirma" testi, saqlab qo'yish va qidiruv imkoniyatlari bo'ladi.
+
+Hozir ushbu to'liq ilovani yaratib beraman.
+
+Qiziqarli Faktlar Olami
+
+
+
+Siz uchun tayyorlangan "Faktolog" nomli interaktiv va zamonaviy faktlar veb-ilovasida quyidagi funksiyalar bor:
+
+Zamonaviy Dizayn: Neon effektlar, Glassmorphism uslubidagi kartochkalar va silliq CSS animatsiyalari.
+
+Kategoriyalar va Qidiruv: Koinot, Tabiat, Inson tani va Tarix bo'yicha tezkor filtrlar hamda qidiruv satri.
+
+Interaktiv Viktorina (Fakt yoki Uydirma): Foydalanuvchilar o'z bilimlarini sinab ko'rishlari, ball to'plashlari va ketma-ketlik (streak) recordlarini o'rnatishlari mumkin.
+
+Tasodifiy Fakt Generatori: Maxsus tugma bosilganda mushakbozlik (confetti) effekti bilan tasodifiy fakt modal oynada ko'rsatiladi.
+
+Saqlanganlar va Ulashish: Sevimli faktlarni xotirada saqlash (localStorage), nushxalash va to'g'ridan-to'g'ri Telegram'da ulashish imkoniyati.
+
+html fayl shaklida
+
+Siz uchun FAKTOLOG nomli o'ta zamonaviy, interaktiv va qiziqarli HTML faylni tayyorladim.
+
+HTML belgisi
+qiziqarli_faktlar_sayt
+ HTML 
+Fayl ichiga kiritilgan imkoniyatlar:
+Dizayn va Stil:
+
+Glassmorphism & Neon Glow: Zamonaviy to'q rangli (dark mode) fon va neon effektlar.
+
+Animatsiyalar: Tugmalarni bosganda confetti (mushakbozlik) otilishi va silliq modal oynalar.
+
+Interaktiv Funksiyalar:
+
+Fact or Fiction (Mini-O'yin): Fakt haqiqat yoki uydirma ekanligini topish orqali ball to'plash o'yini.
+
+Tasodifiy Fakt Generatori: Maxsus tugma va modal oyna orqali tasodifiy fakt chiqarish.
+
+Kategoriyalar va Qidiruv: Koinot, Tabiat, Inson tani hamda Tarix bo'yicha saralash va qidiruv satri.
+
+Saqlash va Ulashish: Faktlarni localStorage xotirasiga saqlash (Bookmark), nusxalash va to'g'ridan-to'g'ri Telegram'ga ulashish tugmalari.
+
+Faylni yuklab olib, istalgan brauzerda ochishingiz va foydalanishingiz mumkin!
+
+
+
+
+
+Gemini odam emas. U xato qilishi mumkin, takroran tekshiring.
+
+Выполняю анализ
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAKTOLOG — Qiziqarli Faktlar Olami</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(22, 31, 49, 0.7);
+            --primary-accent: #7c3aed;
+            --primary-glow: #8b5cf6;
+            --secondary-accent: #06b6d4;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --correct-color: #10b981;
+            --wrong-color: #ef4444;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(6, 182, 212, 0.15) 0%, transparent 40%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+            z-index: -1;
+            animation: pulseGlow 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+            100% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+        }
+
+        header {
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a78bfa, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .logo i {
+            color: var(--secondary-accent);
+            -webkit-text-fill-color: initial;
+            font-size: 26px;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .icon-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--primary-accent);
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            width: 100%;
+            flex: 1;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .hero-title {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .hero-title span {
+            background: linear-gradient(90deg, #c084fc, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .random-btn {
+            background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+            color: white;
+            border: none;
+            padding: 16px 36px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .random-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(6, 182, 212, 0.5);
+        }
+
+        .controls-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 12px 20px 12px 45px;
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-glow);
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .categories {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+            max-width: 100%;
+        }
+
+        .cat-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cat-btn:hover, .cat-btn.active {
+            background: var(--primary-accent);
+            color: white;
+            border-color: var(--primary-glow);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+
+        .quiz-card {
+            background: linear-gradient(135deg, rgba(30, 27, 75, 0.8), rgba(15, 23, 42, 0.8));
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .quiz-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--secondary-accent);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quiz-score {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .quiz-question {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .quiz-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .quiz-btn {
+            flex: 1;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .quiz-btn.true-btn:hover {
+            background: var(--correct-color);
+            border-color: var(--correct-color);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .quiz-btn.false-btn:hover {
+            background: var(--wrong-color);
+            border-color: var(--wrong-color);
+            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+        }
+
+        .quiz-feedback {
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 15px;
+            min-height: 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .fact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(139, 92, 246, 0.4);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 20px rgba(124, 58, 237, 0.2);
+        }
+
+        .fact-tag {
+            align-self: flex-start;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .tag-koinot { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .tag-tabiat { background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); }
+        .tag-tarix { background: rgba(251, 146, 60, 0.15); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.3); }
+        .tag-inson { background: rgba(244, 114, 182, 0.15); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.3); }
+
+        .fact-content {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #e5e7eb;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .fact-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            color: var(--secondary-accent);
+        }
+
+        .action-btn.bookmark-btn.saved {
+            color: #f59e0b;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(16, 185, 129, 0.9);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-content {
+            background: var(--bg-color);
+            border: 1px solid var(--primary-glow);
+            border-radius: 24px;
+            padding: 35px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-icon {
+            font-size: 48px;
+            color: var(--secondary-accent);
+            margin-bottom: 15px;
+        }
+
+        .modal-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .close-btn {
+            background: var(--primary-accent);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 28px; }
+            .quiz-options { flex-direction: column; }
+            .controls-bar { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-atom"></i>
+            <span>FAKTOLOG</span>
+        </div>
+        <div class="nav-actions">
+            <button class="icon-btn" id="savedToggle" title="Saqlangan faktlar">
+                <i class="fa-solid fa-bookmark"></i>
+                <span class="badge" id="savedCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero-section">
+            <h1 class="hero-title">Dunyo haqidagi <span>eng hayratlanarli</span> faktlar</h1>
+            <p class="hero-subtitle">Har kuni yangi bilim oling va dunyoqarashingizni kengaytiring!</p>
+            <button class="random-btn" id="randomFactBtn">
+                <i class="fa-solid fa-dice"></i> Tasodifiy Fakt
+            </button>
+        </section>
+
+        <section class="quiz-card">
+            <div class="quiz-header">
+                <div class="quiz-title">
+                    <i class="fa-solid fa-brain"></i> FACT OR FICTION? (Mini-O'yin)
+                </div>
+                <div class="quiz-score">
+                    Ball: <span id="scoreText" style="color: var(--secondary-accent);">0</span>
+                </div>
+            </div>
+            <div class="quiz-question" id="quizQuestion">
+                Yuklanmoqda...
+            </div>
+            <div class="quiz-options">
+                <button class="quiz-btn true-btn" onclick="checkAnswer(true)">
+                    <i class="fa-solid fa-check"></i> RAST (Haqiqat)
+                </button>
+                <button class="quiz-btn false-btn" onclick="checkAnswer(false)">
+                    <i class="fa-solid fa-xmark"></i> YOLG'ON (Uydirma)
+                </button>
+            </div>
+            <div class="quiz-feedback" id="quizFeedback"></div>
+        </section>
+
+        <div class="controls-bar">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Faktlarni qidirish...">
+            </div>
+            <div class="categories">
+                <button class="cat-btn active" data-cat="all">Barchasi</button>
+                <button class="cat-btn" data-cat="koinot">🌌 Koinot</button>
+                <button class="cat-btn" data-cat="tabiat">🌿 Tabiat</button>
+                <button class="cat-btn" data-cat="inson">🧠 Inson Tani</button>
+                <button class="cat-btn" data-cat="tarix">📜 Tarix</button>
+            </div>
+        </div>
+
+        <main class="facts-grid" id="factsGrid"></main>
+    </div>
+
+    <div class="modal-overlay" id="randomModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <p class="modal-text" id="modalFactText">Fakt yuklanmoqda...</p>
+            <button class="close-btn" onclick="closeModal()">Ajoyib!</button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg">Nusxalandi!</span>
+    </div>
+
+    <script>
+        const factsData = [
+            { id: 1, category: 'koinot', text: "Venera sayyorasida bir kun bir yildan uzunroq davom etadi. U o'z o'qi atrofida juda sekin aylanadi.", isTrue: true },
+            { id: 2, category: 'tabiat', text: "Asal hech qachon aynimaydi. Arxeologlar Qadimgi Misr maqbaralaridan 3000 yillik yeyishga yaroqli asal topishgan.", isTrue: true },
+            { id: 3, category: 'inson', text: "Inson miyasi uyg'oq paytida kichik lampochkani yoqishga yetadigan darajada elektr energiyasi ishlab chiqaradi.", isTrue: true },
+            { id: 4, category: 'tarix', text: "Buyuk Xitoy devori kosmosdan qurolsiz ko'z bilan aniq ko'rinadi.", isTrue: false },
+            { id: 5, category: 'tabiat', text: "Dengiz otlarida erkaklar homilador bo'ladi va bolalarni dunyoga keltiradi.", isTrue: true },
+            { id: 6, category: 'koinot', text: "Neptun sayyorasida olmos yomg'irlari yog'adi.", isTrue: true },
+            { id: 7, category: 'inson', text: "Inson tanasidagi eng kuchli muskul tildir.", isTrue: false },
+            { id: 8, category: 'tarix', text: "Oksford Universiteti Asteklar Imperiyasidan ham qadimiyroq hisoblanadi.", isTrue: true },
+            { id: 9, category: 'tabiat', text: "Bananlar biologik jihatdan rezavor meva kabi tasniflanadi, ammo qulupnay unday emas.", isTrue: true },
+            { id: 10, category: 'koinot', text: "Koinot mutlaqo jimjit joy, chunki u yerda tovush to'lqinlari tarqalishi uchun havo yo'q.", isTrue: true },
+            { id: 11, category: 'inson', text: "Kattalar tanasidagi suyaklar soni chaqaloqlarnikidan ko'proq.", isTrue: false },
+            { id: 12, category: 'tarix', text: "Kleopatra Oyga qo'nish hodisasidan ko'ra Piramidalar qurilgan davrga vaqtan yaqinroq yashagan.", isTrue: true }
+        ];
+
+        let savedFacts = JSON.parse(localStorage.getItem('savedFacts')) || [];
+        let currentFilter = 'all';
+        let currentQuizIndex = 0;
+        let score = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFacts();
+            updateSavedCount();
+            initQuiz();
+
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                renderFacts(e.target.value);
+            });
+
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    currentFilter = e.target.dataset.cat;
+                    renderFacts(document.getElementById('searchInput').value);
+                });
+            });
+
+            document.getElementById('randomFactBtn').addEventListener('click', showRandomFact);
+
+            document.getElementById('savedToggle').addEventListener('click', () => {
+                const btn = document.getElementById('savedToggle');
+                if (currentFilter === 'saved') {
+                    currentFilter = 'all';
+                    btn.style.background = 'rgba(255, 255, 255, 0.05)';
+                } else {
+                    currentFilter = 'saved';
+                    btn.style.background = 'var(--primary-accent)';
+                }
+                renderFacts();
+            });
+        });
+
+        function renderFacts(searchQuery = '') {
+            const grid = document.getElementById('factsGrid');
+            grid.innerHTML = '';
+
+            let filtered = factsData.filter(fact => {
+                const matchesCategory = currentFilter === 'all' || 
+                                        (currentFilter === 'saved' && savedFacts.includes(fact.id)) ||
+                                        fact.category === currentFilter;
+                const matchesSearch = fact.text.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 40px;">Hozircha hech qanday fakt topilmadi...</div>`;
+                return;
+            }
+
+            filtered.forEach(fact => {
+                const isSaved = savedFacts.includes(fact.id);
+                const card = document.createElement('div');
+                card.className = 'fact-card';
+                card.innerHTML = `
+                    <span class="fact-tag tag-${fact.category}">${fact.category}</span>
+                    <div class="fact-content">${fact.text}</div>
+                    <div class="fact-footer">
+                        <div class="action-btns">
+                            <button class="action-btn bookmark-btn ${isSaved ? 'saved' : ''}" onclick="toggleSave(${fact.id})">
+                                <i class="fa-${isSaved ? 'solid' : 'regular'} fa-bookmark"></i>
+                            </button>
+                            <button class="action-btn" onclick="copyFact('${fact.text.replace(/'/g, "\'")}')">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                        <button class="action-btn" onclick="shareTelegram('${fact.text.replace(/'/g, "\'")}')">
+                            <i class="fa-paper-plane fa-solid" style="color: #22e5e0;"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function toggleSave(id) {
+            if (savedFacts.includes(id)) {
+                savedFacts = savedFacts.filter(factId => factId !== id);
+                showToast("Saqlanganlardan olib tashlandi");
+            } else {
+                savedFacts.push(id);
+                showToast("Fakt saqlandi!");
+            }
+            localStorage.setItem('savedFacts', JSON.stringify(savedFacts));
+            updateSavedCount();
+            renderFacts(document.getElementById('searchInput').value);
+        }
+
+        function updateSavedCount() {
+            document.getElementById('savedCount').textContent = savedFacts.length;
+        }
+
+        function copyFact(text) {
+            navigator.clipboard.writeText(text);
+            showToast("Nusxalandi!");
+        }
+
+        function shareTelegram(text) {
+            const url = `https://t.me/share/url?url=${encodeURIComponent('https://faktolog.uz')}&text=${encodeURIComponent('🔥 Qiziqarli Fakt:
+
+' + text)}`;
+            window.open(url, '_blank');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        function showRandomFact() {
+            const randomIndex = Math.floor(Math.random() * factsData.length);
+            const fact = factsData[randomIndex];
+            document.getElementById('modalFactText').textContent = fact.text;
+            document.getElementById('randomModal').classList.add('active');
+
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 80,
+                    spread: 60,
+                    origin: { y: 0.6 }
+                });
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('randomModal').classList.remove('active');
+        }
+
+        function initQuiz() {
+            currentQuizIndex = Math.floor(Math.random() * factsData.length);
+            document.getElementById('quizQuestion').textContent = factsData[currentQuizIndex].text;
+            document.getElementById('quizFeedback').textContent = '';
+        }
+
+        function checkAnswer(userAnswer) {
+            const currentFact = factsData[currentQuizIndex];
+            const feedbackEl = document.getElementById('quizFeedback');
+
+            if (userAnswer === currentFact.isTrue) {
+                score += 10;
+                feedbackEl.style.color = 'var(--correct-color)';
+                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-check"></i> To'g'ri topdingiz! (+10 ball)`;
+                if (typeof confetti === 'function') {
+                    confetti({ particleCount: 40, spread: 40, origin: { y: 0.7 } });
+                }
+            } else {
+                feedbackEl.style.color = 'var(--wrong-color)';
+                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> Noto'g'ri! ${currentFact.isTrue ? 'Bu fakt aslida ROST edi.' : 'Bu fakt uydirma edi.'}`;
+            }
+
+            document.getElementById('scoreText').textContent = score;
+
+            setTimeout(() => {
+                initQuiz();
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+qiziqarli_faktlar_sayt.html
+“qiziqarli_faktlar_sayt.html” ko‘rsatilmoqda.
